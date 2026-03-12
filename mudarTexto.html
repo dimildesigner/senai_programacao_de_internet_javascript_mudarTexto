@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Texto</title>
+</head>
+<body>    
+    <h1 id="titulo">Olá, Mundo!</h1> <!-- crio e identifico o elemento que será alterado -->
+    <button id="botao">Mudar Texto</button>
+    <button id="botaoReiniciar" onclick="reiniciar()">Reiniciar</button> <!-- Botão implementado -->
+
+    <script>
+        // associo cada elemento do meu js usando constantes e getElementById()
+        const titulo = document.getElementById("titulo")
+        const botao = document.getElementById("botao")
+        const botaoReiniciar = document.getElementById('botaoReiniciar')
+
+        // Adiciono o ouvinte (Listener) + função no clique do botão
+        botao.addEventListener("click", () => {
+            titulo.innerText = "Bem-vindo!"
+        })
+
+        // Adiciono o ouvinte (Listener) + função no clique do botão
+        botao.addEventListener("mouseover", () => {
+            titulo.innerText = "Está chovendo?"
+        })
+
+        botao.addEventListener("mouseout", () => {
+            titulo.innerText = "Leve o guarda-chuva!"
+            titulo.style.color = "red"
+        })
+
+        // Implementação da função reiniciar
+        function reiniciar()
+        {
+            titulo.innerText = "Olá, Mundo!"
+            titulo.style.color = "black"
+        }
+    </script>
+</body>
+</html>
